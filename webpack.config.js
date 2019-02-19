@@ -1,31 +1,68 @@
 const path = require('path');
+
+const SRC_DIR = path.resolve(__dirname, 'src');
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const ASSET_PATH = process.env.ASSET_PATH || '';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const PATHS = {
-    source: path.join(__dirname, 'source'),
-    build: path.join(__dirname, 'build')
-};
-
 module.exports = {
-    entry: PATHS.source + '/index.js',
-    output: {
-        path: PATHS.build,
-        filename: '[name].js'
+    entry: {
+        app: SRC_DIR + '/index.js'
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: PATHS.source + '/index.pug'
-        })
-    ],
+    output: {
+        path: DIST_DIR,
+        filename: '[name].bundle.js',
+        publicPath: ASSET_PATH
+    },
+    resolve: {
+        modules: [SRC_DIR, "node_modules"],
+        extensions: ['.js', '.css', '.scss']
+    },
     module: {
-        rules: [
-            {
+        rules: [{
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
+            },
+
+            { 
                 test: /\.pug$/,
-                loader: 'pug-loader',
-                options: {
-                    pretty: true
-                }
+                use: ['pug-loader']
+            },
+            // images
+            {
+                test: /\.(png|svg|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'assets/images/[name].[ext]',
+                        outputPath: '',
+                        useRelativePath: false
+                    }
+                }]
+            },
+            // fonts
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                use: [{
+                    loader:'file-loader',
+                    options: {
+                        name: 'assets/fonts/[name].[ext]',
+                        outputPath: ''
+                    }
+                }]
             }
         ]
-    }
+    },
+    plugins: [
+
+        
+        new ExtractTextPlugin('style.css'),
+        new HtmlWebpackPlugin({
+            template: './src/index.pug'
+          })
+    ]
 };

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Myriad-Pro';
+  src: url(assets/fonts/Myriad-Pro_31655.eot);
+  src: local("☺"), url(assets/fonts/Myriad-Pro_31655.woff) format("woff"), url(assets/fonts/Myriad-Pro_31655.ttf) format("truetype"), url(assets/images/Myriad-Pro_31655.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad-Pro-Light-SemiExt';
+  src: url(assets/fonts/Myriad-Pro-Light-SemiExtended_31641.eot);
+  src: local("☺"), url(assets/fonts/Myriad-Pro-Light-SemiExtended_31641.woff) format("woff"), url(assets/fonts/Myriad-Pro-Light-SemiExtended_31641.ttf) format("truetype"), url(assets/images/Myriad-Pro-Light-SemiExtended_31641.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  margin: auto; }
+
+.container {
+  margin: 0 auto;
+  font-family: 'Myriad-Pro';
+  max-width: 1920px;
+  min-width: 320px;
+  height: 3508px;
+  background-color: #ffffff;
+  padding-left: 6.2%;
+  padding-top: 3.6%; }
+
+.about {
+  width: 40%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase; }
+
+.circles {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center; }
+
+.white_with_border {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 2px solid #3d6cb0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.blue {
+  width: 80%;
+  height: 80%;
+  background-color: #3d6cb0;
+  border-radius: 50%; }
+
+.name {
+  font-family: "Myriad-Pro-Light-SemiExt";
+  font-size: 104px;
+  margin-top: 8.4%;
+  margin-bottom: 0;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.surname {
+  width: 97%;
+  font-size: 123px;
+  margin-top: 3%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.job {
+  width: 97%;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.1%; }
