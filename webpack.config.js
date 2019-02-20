@@ -34,13 +34,13 @@ module.exports = {
             },
             // images
             {
-                test: /\.(png|svg|jpe?g|gif)$/i,
+                test: /\.(png|svg|jpg|gif)$/i,
                 use: [{
                     loader: 'file-loader',
                     options: {
                         name: 'assets/images/[name].[ext]',
-                        outputPath: '',
-                        useRelativePath: false
+                        outputPath: '',                                                
+                        useRelativePath: true
                     }
                 }]
             },
@@ -57,12 +57,11 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-
-        
+    plugins: [        
         new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
             template: './src/index.pug'
           })
+        
     ]
 };
