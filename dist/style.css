@@ -18,18 +18,23 @@ body {
   font-family: 'Myriad-Pro';
   max-width: 1920px;
   min-width: 320px;
-  height: 3508px;
+  max-height: 150vw;
   background-color: #ffffff;
-  padding-top: 3.6%; }
+  padding-top: 5vw;
+  padding-left: 3vw;
+  padding-right: 2vw;
+  display: flex;
+  flex-flow: column wrap; }
 
 .about {
-  width: 45%;
+  width: 35%;
   height: 35vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 6vw; }
 
 .circles {
   width: 25vmax;
@@ -56,7 +61,7 @@ body {
 .name {
   font-family: "Myriad-Pro-Light-SemiExt";
   font-size: 4.5vw;
-  margin-top: 8.4%;
+  margin-top: 2vw;
   margin-bottom: 0;
   width: 55%;
   display: flex;
@@ -66,24 +71,25 @@ body {
 .surname {
   width: 97%;
   font-size: 5vw;
-  margin-top: 3%;
+  margin-top: 0.5vw;
   margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .job {
-  width: 60%;
-  font-size: 1.9vw;
+  width: 16vmax;
+  font-size: 1.4vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5.1%; }
+  margin-top: 1vw; }
 
 .block {
-  width: 45%;
-  height: 32vw;
-  margin-bottom: 0.5vw; }
+  width: 35%;
+  height: 35vmax;
+  margin-bottom: 0.5vw;
+  margin-right: 5%; }
 
 .block__header {
   width: 100%;
@@ -93,13 +99,13 @@ body {
   margin-bottom: 1.2vw; }
 
 .block__header__img {
-  max-width: 20%; }
+  width: 6vmax; }
 
 .block__header_p {
   width: 17vmax;
   height: 2.28vw;
   color: #3d6cb0;
-  font-size: 3.1vw;
+  font-size: 3vmax;
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
@@ -108,15 +114,9 @@ body {
   margin-left: 0.999vw;
   margin-right: 0.68vw; }
 
-.block__header_p__contact {
-  width: 17vw; }
-
-.block__header_p__skills {
-  width: 10vw; }
-
 .blue_rectangle {
-  width: 18vw;
-  height: 7%;
+  width: 100vh;
+  height: 0.5vw;
   background-color: #3d6cb0; }
 
 .block__text {
@@ -173,3 +173,89 @@ body {
 
 .progress_circle_blue {
   background-color: #3d6cb0; }
+
+.leftColumn {
+  width: 60%;
+  height: 52vmax; }
+  .leftColumn .block__header {
+    margin-bottom: 10%; }
+
+.leftColumn__software {
+  margin-top: 5%;
+  height: 27vw; }
+  .leftColumn__software .block__header {
+    margin-bottom: 1%; }
+
+.block__leftColumn__ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.block__leftColumn_univercity {
+  margin: 0;
+  font-size: 2vw;
+  margin-bottom: 0.9vw; }
+  .block__leftColumn_univercity span {
+    color: #3d6cb0;
+    margin-right: 1.54vw;
+    font-weight: 700; }
+  .block__leftColumn_univercity .company_name {
+    color: #000; }
+
+.block__leftColumn_univercity:before {
+  content: '';
+  height: 1.6vw;
+  width: 1.6vw;
+  display: inline-flex;
+  align-items: flex-end;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 2vw; }
+
+.univercity_or_company_name {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-left: 3.7vw; }
+
+.block__leftColumn__text {
+  margin: 0;
+  height: 4.9vw;
+  width: 95%;
+  margin-left: 3.7vw; }
+
+.software__progress {
+  width: 97%;
+  height: 22vw;
+  display: flex;
+  flex-flow: column wrap; }
+
+.software__progress__block {
+  width: 45%;
+  height: 5vw;
+  margin-bottom: 2vw; }
+
+.software__progress__block_name {
+  font-size: 2vw;
+  margin-bottom: 0.7vw;
+  margin-top: 0; }
+
+.software__progress__block_progress {
+  height: 2vw;
+  width: 100%;
+  background: #e6e6e6;
+  color: #3d6cb0;
+  margin: 0; }
+
+.software__progress__block_progress_left_column {
+  margin-right: 10%; }
+
+.software__progress__block_progress::-webkit-progress-bar {
+  background: #e6e6e6; }
+
+.software__progress__block_progress::-webkit-progress-value {
+  background: #3d6cb0; }
+
+.software__progress__block_progress::-moz-progress-bar {
+  background: #e6e6e6;
+  color: #3d6cb0; }
